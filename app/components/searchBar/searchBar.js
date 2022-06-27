@@ -8,7 +8,7 @@ const SearchBar = ({callSearch, searchKeyWord}) => {
       <TextInput
         style={styles.input}
         value={searchKeyWord}
-        placeholder={'Search images..'}
+        placeholder={'Search images...'}
         onChangeText={callSearch}
       />
     </View>
