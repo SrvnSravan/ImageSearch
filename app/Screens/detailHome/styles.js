@@ -3,11 +3,12 @@ import {
   widthPercentageToDP as wp,
   heightPercentageToDP as hp,
 } from 'react-native-responsive-screen';
+import Colors from '../../components/colors/colors';
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: Colors.WHITE,
   },
   cardImageStyle: {
     width: wp(100),
@@ -16,7 +17,7 @@ const styles = StyleSheet.create({
   titleStyle: {
     fontWeight: '300',
     fontSize: hp(3),
-    color: 'black',
+    color: Colors.BLACK,
     textAlign: 'center',
     marginTop: 30,
     marginLeft: 10,
@@ -24,7 +25,7 @@ const styles = StyleSheet.create({
   lowerViewStyle: {
     borderTopRightRadius: 20,
     borderTopLeftRadius: 20,
-    backgroundColor: '#fff',
+    backgroundColor: Colors.WHITE,
     bottom: 20,
   },
 });

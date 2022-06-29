@@ -3,11 +3,12 @@ import {
   widthPercentageToDP as wp,
   heightPercentageToDP as hp,
 } from 'react-native-responsive-screen';
+import Colors from '../../components/colors/colors';
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#cdd1d1',
+    backgroundColor: Colors.HOME_COLOR,
   },
   input: {
     borderWidth: 0.8,
