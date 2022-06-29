@@ -7,14 +7,14 @@ import {
 const styles = StyleSheet.create({
   input: {
     borderWidth: 0.8,
+    paddingLeft: wp(5),
     width: wp(90),
     alignSelf: 'center',
-    height: hp(5),
+    height: hp(6),
     borderRadius: 25,
     marginVertical: hp(2),
     paddingHorizontal: 5,
     fontWeight: 'bold',
-    textAlign: 'center',
   },
 });
 export default styles;

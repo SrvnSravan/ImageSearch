@@ -1,11 +1,10 @@
 import React, {useState, useCallback} from 'react';
 import {FlatList, Text, View} from 'react-native';
 import debounce from 'lodash.debounce';
-import styles from '../homeScreen/styles';
+import styles from './styles';
 import Card from '../../components/cards/card';
-import Constant from '../../constants/constants';
-import Service from '../../services/api';
-import SearchBar from '../../components/searchBar/searchBar';
+import {getImages} from '../../services/api/get-images/get-images';
+import SearchBar from '../../components/search-bar/search-bar';
 
 const Home = props => {
   const {navigation} = props;
@@ -13,20 +12,11 @@ const Home = props => {
   const [searchData, setSearch] = useState([]);
 
   const fetchData = async searchText => {
-    const apiKey = '94ba3cfe1067217baf69a04ab4576a66';
-    const requestUrl =
-      Constant.BASE_URL +
-      apiKey +
-      '&format=json&nojsoncallback=1&text=' +
-      searchText;
-
-    const requestedData = {
-      method: 'post',
-      url: requestUrl,
+    const queryParameters = {
+      text: searchText,
     };
-
-    const response = await Service(requestedData);
-    setSearch(response.photos?.photo);
+    const result = await getImages(queryParameters);
+    setSearch(result.photos?.photo);
   };
 
   const callSearch = text => {
