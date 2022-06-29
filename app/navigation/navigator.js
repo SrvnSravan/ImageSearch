@@ -11,8 +11,12 @@ const Navigator = () => {
     <>
       <NavigationContainer>
         <Stack.Navigator initialRouteName="home">
-          <Stack.Screen name={'iMAGE SearchEngine'} component={home} />
-          <Stack.Screen name={'Detail'} component={Detail} />
+          <Stack.Screen
+            name={'homeScreen'}
+            component={home}
+            options={{title: 'iMAGE SearchEngine'}}
+          />
+          <Stack.Screen name={'detailsScreen'} component={Detail} />
         </Stack.Navigator>
       </NavigationContainer>
     </>
